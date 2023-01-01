@@ -7,7 +7,7 @@ sealed interface NavGraphSpec {
     companion object {
         val allGraphs = listOf<NavGraphSpec>(
             ExpenseGraphSpec,
-            BillsGraphSpec,
+            PaymentPlanGraphSpec,
             SettingsGraphSpec
         ).associateBy(NavGraphSpec::graphRoute)
     }

@@ -5,12 +5,11 @@ import com.zhuinden.flowcombinetuplekt.combineTuple
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dev.ridill.stonkswallet.R
 import dev.ridill.stonkswallet.core.domain.model.UiText
-import dev.ridill.stonkswallet.core.ui.navigation.screen_specs.AddEditPaymentPlanScreenSpec
 import dev.ridill.stonkswallet.core.util.Constants
 import dev.ridill.stonkswallet.core.util.toDoubleOrZero
-import dev.ridill.stonkswallet.feature_payment_plan.domain.payment_reminder.PaymentPlanReminderManager
-import dev.ridill.stonkswallet.feature_payment_plan.domain.model.PaymentPlan
 import dev.ridill.stonkswallet.feature_payment_plan.domain.model.PaymentCategory
+import dev.ridill.stonkswallet.feature_payment_plan.domain.model.PaymentPlan
+import dev.ridill.stonkswallet.feature_payment_plan.domain.payment_reminder.PaymentPlanReminderManager
 import dev.ridill.stonkswallet.feature_payment_plan.domain.repository.AddEditPaymentPlanRepository
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.map
@@ -25,8 +24,11 @@ class AddEditPaymentPlanViewModel @Inject constructor(
     private val paymentPlanReminderManager: PaymentPlanReminderManager
 ) : ViewModel(), AddEditPaymentPlanActions {
 
-    private val billId = AddEditPaymentPlanScreenSpec.getPaymentPlanIdFromSavedStateHandle(savedStateHandle)
-    val isEditMode = AddEditPaymentPlanScreenSpec.isEditMode(billId)
+    private val planId = -1L
+
+    //        AddEditPaymentPlanScreenSpec.getPaymentPlanIdFromSavedStateHandle(savedStateHandle)
+    val isEditMode = false
+//        AddEditPaymentPlanScreenSpec.isEditMode(planId)
 
     private val paymentPlan = savedStateHandle.getLiveData<PaymentPlan>(KEY_BILL_LIVE_DATA)
     val name = paymentPlan.map { it.name }
@@ -66,8 +68,8 @@ class AddEditPaymentPlanViewModel @Inject constructor(
 
     init {
         if (!savedStateHandle.contains(KEY_BILL_LIVE_DATA)) {
-            if (billId != null && isEditMode) viewModelScope.launch {
-                paymentPlan.value = repo.getPlan(billId)
+            if (planId != null && isEditMode) viewModelScope.launch {
+                paymentPlan.value = repo.getPlan(planId)
             } else {
                 paymentPlan.value = PaymentPlan.DEFAULT
             }
@@ -156,7 +158,7 @@ class AddEditPaymentPlanViewModel @Inject constructor(
     }
 
     override fun onDeleteConfirm() {
-        billId?.let {
+        planId?.let {
             viewModelScope.launch {
                 repo.delete(it)
                 if (!repo.doAnyPlansExist()) paymentPlanReminderManager.stopReminder()

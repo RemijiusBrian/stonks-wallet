@@ -1,3 +1,187 @@
 <resources>
-    <string name="app_name">StonksWallet</string>
+    <string name="app_name">Stonks Wallet</string>
+
+    <!-- Destination Labels -->
+    <string name="destination_dashboard">Dashboard</string>
+
+    <string name="destination_add_edit_expense">Add/Edit Expense</string>
+    <string name="destination_detailed_view">Detailed</string>
+    <string name="destination_payment_plans">Payment Plans</string>
+    <string name="destination_add_edit_payment_plan">Add/Edit Payment Plan</string>
+    <string name="destination_settings">Settings</string>
+
+    <!-- Permission Rationals -->
+    <string name="permission_receive_sms_rationale">needs permission to view your SMS messages so that it can try to add expenses automatically.</string>
+    <string name="permission_post_notifications_rationale">needs permission to post notifications to remind you of your payments.</string>
+
+    <!-- Error -->
+    <string name="error_invalid_amount">Please enter a valid amount</string>
+    <string name="error_invalid_note">Please enter a valid note</string>
+    <string name="error_invalid_description">Please enter a valid description</string>
+    <string name="error_invalid_tag_name">Please enter a valid tag name</string>
+
+    <!-- Content Description -->
+    <string name="content_description_add_expense">Add Expense</string>
+    <string name="content_description_create_new_tag">Create New Tag</string>
+    <string name="content_description_delete_expense">Delete Expense</string>
+    <string name="content_description_navigate_up">Navigate Up</string>
+    <string name="content_description_save">Save</string>
+    <string name="content_description_edit_limit">Edit Limit</string>
+    <string name="content_description_delete_tag">Delete Tag</string>
+    <string name="content_description_error">Error</string>
+    <string name="content_description_balance_low_warning">Balance Low</string>
+    <string name="content_description_cancel_multi_selection_mode">Cancel Multi Selection Mode</string>
+    <string name="content_description_toggle_menu">Toggle Menu</string>
+    <string name="content_description_payment_plan_category">Payment Plan Category</string>
+    <string name="content_description_expand">Expand</string>
+    <string name="content_description_clear">Clear</string>
+    <string name="content_description_toggle_dropdown">Toggle dropdown</string>
+    <string name="content_description_scroll_to_top">Scroll to top</string>
+    <string name="content_description_untag_expenses">Untag expenses</string>
+    <string name="content_description_date_picker">Date Picker</string>
+    <string name="content_description_notification_status">Notification Status</string>
+
+    <!-- Notifications -->
+    <string name="notification_channel_group_payment_plans">Payment Plans</string>
+    <string name="notification_channel_group_bills_desc">All \'Payment Plans\' notifications</string>
+    <string name="notification_channel_payment_plan_reminder">Payment Reminders</string>
+    <string name="upcoming_payment_reminder_notification_text">Coming up on %s</string>
+    <string name="upcoming_payments">Upcoming Payments</string>
+
+    <string name="notification_channel_group_expenses">Expenses</string>
+    <string name="notification_channel_group_expenses_desc">All \'Expense\' notifications</string>
+    <string name="notification_channel_expenses_added">Auto Add Expenses</string>
+    <string name="expense_notification_title">Expense Added</string>
+    <string name="expense_notification_text">Expense added for %s</string>
+    <string name="expenses_added_notification_summary">%d New Expenses</string>
+
+    <!-- Preferences -->
+    <string name="general">General</string>
+    <string name="theme">Theme</string>
+    <string name="links">Links</string>
+    <string name="contact_support">Contact Support</string>
+    <string name="bug_report_feature_request">Report a bug or request a feature</string>
+    <string name="info">Info</string>
+    <string name="app_version">App Version</string>
+    <string name="expense">Expense</string>
+    <string name="expenditure_limit">Expenditure Limit</string>
+
+    <!-- Dialog Messages -->
+    <string name="dialog_delete_expense_title">Delete Expense?</string>
+    <string name="dialog_delete_expense_message">Are you sure you want to delete this expense? This action cannot be undone.</string>
+    <string name="dialog_delete_selected_expense_title">Delete Selected Expenses?</string>
+    <string name="dialog_delete_selected_expense_message">Are you sure you want to delete the selected expenses? This action cannot be undone.</string>
+    <string name="dialog_delete_payment_plan_title">Delete Payment Plan?</string>
+    <string name="dialog_delete_payment_plan_message">Are you sure you want to delete this payment plan? This action cannot be undone.</string>
+    <string name="dialog_delete_tag_title">Delete Tag?</string>
+    <string name="dialog_delete_tag_message">Are you sure you want to delete this tag? This action cannot be undone.</string>
+    <string name="dialog_discard_changes_title">Discard Changes?</string>
+    <string name="dialog_discard_changes_message">You appear to have some unsaved changes. Do you want to discard the changes made?</string>
+
+    <!-- Additional -->
+    <plurals name="repeat_period">
+        <item quantity="zero">One time payment</item>
+        <item quantity="one">Repeats every month</item>
+        <item quantity="other">Repeats every %d months</item>
+    </plurals>
+
+    <!-- Texts -->
+    <string name="action_confirm">Confirm</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_dismiss">Dismiss</string>
+    <string name="action_discard">Discard</string>
+    <string name="action_undo">Undo</string>
+    <string name="action_agree">Agree</string>
+
+    <string name="message_expense_added">Expense Added!</string>
+    <string name="message_expense_updated">Expense Updated!</string>
+    <string name="message_expense_deleted">Expense Deleted!</string>
+    <string name="message_payment_plan_added">Payment Plan Added!</string>
+    <string name="message_payment_plan_updated">Payment Plan Updated!</string>
+    <string name="message_payment_plan_deleted">Payment Plan Deleted!</string>
+
+    <string name="add_expense">Add Expense</string>
+    <string name="edit_expense">Edit Expense</string>
+    <string name="name">Name</string>
+    <string name="new_tag">New</string>
+    <string name="label_tag">Tag</string>
+
+    <string name="enter_expenditure_limit">Enter a limit for your expenditure</string>
+    <string name="default_no_data_message">There isn\'t any data right now</string>
+    <string name="empty_expenses_data_message">Expenses you add will appear here</string>
+    <string name="empty_payment_plans_data_message">Payment plans you add will appear here</string>
+    <string name="tag_input_label">Tag Name</string>
+    <string name="amount">Amount</string>
+    <string name="amount_placeholder">0.0</string>
+    <string name="max_chars">Max %d characters</string>
+    <string name="tag_created">Tag created!</string>
+    <string name="expense_list_label">Expenses</string>
+    <string name="tag_list_label">Tags</string>
+    <string name="new_payment_plan">New Plan</string>
+    <string name="label_expense_list">Expenses</string>
+    <string name="mark_as_paid">Mark as paid</string>
+    <string name="label_upcoming_bills">Upcoming</string>
+    <string name="label_paid_bills">Paid</string>
+    <string name="label_unpaid_bills">Unpaid</string>
+    <string name="pay_by_date_value">Pay by %s</string>
+    <string name="paid_on_date_value">Paid on %s</string>
+    <string name="pending_since_date_value">Pending since %s</string>
+    <string name="due_date_value">Due: %s</string>
+    <string name="payment_plan_marked_as_paid_message">Payment marked as made</string>
+    <string name="recurring">Recurring</string>
+    <string name="click_to_select_category">Click to select category</string>
+    <string name="select_category">Select Category</string>
+    <string name="due_on_date">Due on %s</string>
+    <string name="spent_amount">Spent\n%s</string>
+    <string name="add_payment_plan">Add Payment Plan</string>
+    <string name="edit_payment_plan">Edit Payment Plan</string>
+    <string name="add_note">Add a note</string>
+    <string name="payment_plan_description_eg">Eg: Home Broadband Bill</string>
+    <string name="description">Description</string>
+    <string name="payment_plan_entry">Payment Plan Entry</string>
+    <string name="balance">Balance</string>
+    <string name="theme_system_default">System Default</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+    <string name="select_theme">Select Theme</string>
+    <string name="expenditure_limit_updated">Expenditure limit updated</string>
+    <string name="exhausted">Exhausted!</string>
+    <string name="value_updated">Value Updated!</string>
+    <string name="show_warning_when_balance_under">Show warning when balance under</string>
+    <string name="set_value_to_zero_to_disable">*Set value to 0% to disable</string>
+    <string name="show_warning_below_percentage_selection_title">Select percentage</string>
+    <string name="warning_will_show_when_balance_drops_below">Show warning when balance drops below\n%s%%</string>
+    <string name="disabled_low_warning_balance">Don\'t show warning</string>
+    <string name="disabled">Disabled</string>
+    <string name="option_delete">Delete</string>
+    <string name="option_edit">Edit</string>
+    <string name="count_selected">%d selected</string>
+    <string name="select_all">Select All</string>
+    <string name="deselect_all">Deselect All</string>
+    <string name="app_greeting">Good %s,</string>
+    <string name="hour_morning">Morning</string>
+    <string name="hour_noon">Noon</string>
+    <string name="hour_afternoon">Afternoon</string>
+    <string name="hour_evening">Evening</string>
+    <string name="your_limit">Your limit</string>
+    <string name="your_expenditure">You\'ve spent</string>
+    <string name="detailed_view_data_empty">Your expenses for this tag will appear here</string>
+    <string name="expense_deleted">Expense deleted!</string>
+    <string name="selected_expenses_deleted">Selected expenses deleted!</string>
+    <string name="percent_of_total">%s of total</string>
+    <string name="total_spent">Total Spent</string>
+    <string name="tag_deleted">Tag deleted!</string>
+    <string name="create_tag">Create Tag</string>
+    <string name="color">Color</string>
+    <string name="expenses_tagged_as">Expenses tagged as %s</string>
+    <string name="select_tag_to_assign_to_expenses">Select tag to assign to expenses</string>
+    <string name="expenses_untagged">Expenses Untagged!</string>
+    <string name="backup">Backup</string>
+    <string name="google_account">Google Account</string>
+    <string name="perform_data_backup">Perform data backup</string>
+    <string name="notifications">Notifications</string>
+    <string name="auto_add_expenses">Auto add expenses</string>
+    <string name="selected_date">Selected Date</string>
+    <string name="text_in_parenthesis">(%s)</string>
+    <string name="payment_made">Payment Made</string>
 </resources>

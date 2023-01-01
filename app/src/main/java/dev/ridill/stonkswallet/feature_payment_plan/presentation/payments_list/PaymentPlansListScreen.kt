@@ -27,7 +27,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import dev.ridill.stonkswallet.R
 import dev.ridill.stonkswallet.core.ui.components.*
-import dev.ridill.stonkswallet.core.ui.navigation.screen_specs.PaymentPlansListScreenSpec
+import dev.ridill.stonkswallet.core.ui.navigation.screen_specs.PaymentPlansScreenSpec
 import dev.ridill.stonkswallet.core.ui.theme.ScrollEndPadding
 import dev.ridill.stonkswallet.core.ui.theme.SpacingMedium
 import dev.ridill.stonkswallet.core.ui.theme.SpacingSmall
@@ -38,7 +38,7 @@ import dev.ridill.stonkswallet.feature_payment_plan.domain.model.PaymentStatus
 import dev.ridill.stonkswallet.feature_payment_plan.presentation.components.PaymentPlanCategoryIcon
 
 @Composable
-fun PaymentPlansListScreenContent(
+fun PaymentPlansScreenContent(
     state: PaymentsListScreenState,
     snackbarController: SnackbarController,
     navigateToAddEditPaymentPlanScreen: () -> Unit,
@@ -54,7 +54,7 @@ fun PaymentPlansListScreenContent(
         snackbarHost = { DefaultSnackbarHost(snackbarController) },
         topBar = {
             TransparentTopAppBar(
-                title = PaymentPlansListScreenSpec.label,
+                title = PaymentPlansScreenSpec.label,
                 navigationIcon = { BackArrowButton(onClick = navigateUp) },
             )
         },
